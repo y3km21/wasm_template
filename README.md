@@ -1,3 +1,3 @@
-# ts_template
+# wasm_template
 
-ts tamplate
+wasm tamplate
