@@ -5,14 +5,19 @@
   "main": "index.js",
   "private": "true",
   "scripts": {
+    "wasmbuild": "wasm-pack build ./src/wasm --out-name index",
     "start": "webpack serve --config webpack.config.js",
     "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yusuke Mitsui",
   "license": "MIT",
+  "dependencies": {
+    "wasm": "file:./src/wasm/pkg"
+  },
   "devDependencies": {
     "@types/lodash": "~4.14.168",
+    "@wasm-tool/wasm-pack-plugin": "^1.4.0",
     "copy-webpack-plugin": "~8.1.1",
     "css-loader": "~5.2.0",
     "html-webpack-plugin": "~5.3.1",
